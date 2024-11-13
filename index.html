@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio sesion 5 - Uso de formularios basico HTML</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            background-color: antiquewhite;
+        }
+
+        .container-form{
+            width: 50%;
+            margin: 0px auto ;
+            background-color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0, 0.6);
+            
+        }
+
+        .titulo-form{
+                background-color: blue;
+                color: white;
+                text-align: center;
+                padding: 5px;
+        }
+
+        label{
+            display: block;
+            margin-right: 20px;
+            font-size: 12px;
+            margin-bottom: 5px;
+
+        }
+
+        input, select{
+            margin-bottom: 15px;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        fieldset{
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header> </header>
+    <nav> </nav>
+
+    <section class="container-form">
+        <h1 class="titulo-form">Formulario registro de usuario</h1>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">* Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="nombre apellido" required>
+                <br>
+                <label for="email">* Email:</label>
+                <input type="email" name="email" id="email" placeholder="email@domain" required>
+                <br>
+                <label for="telefono">Telefono: </label>
+                <input type="tel" name="telefono" id="telefono">
+                <br>
+                <label for="fechanac">* Fecha nacimiento</label>
+                <input type="date" name="fechanac" id="fechanac" required>
+                <br>
+                <label for="edad">* Edad: </label>
+                <input type="number" name="edad" id="edad" required>
+                <br>
+                <label for="escolaridad">Nivel escolaridad: </label>
+                <select name="escolaridad" id="escolaridad">
+                    <option value="0" selected></option>
+                    <option value="1" disabled>Primaria</option>
+                    <option value="2">Bachillerato</option>
+                    <option value="3">Pregrado</option>
+                    <option value="4">Especializacion</option>
+                    <option value="5">Maestria</option>
+                    <option value="6">Doctorado</option>
+                </select>
+                <br>
+                <label for="comentario">Comentarios: </label>
+                <textarea name="comentario" id="comentario" rows="4"></textarea>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Credenciales de acceso</legend>
+                <label for="username">* Username: </label>
+                <input type="text" name="username" id="username" required pattern="[A-Z]{3}" placeholder="AAA">
+                <br>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" required minlength="8" maxlength="16">
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+
+        </form>
+
+    </section>
+
+    <footer></footer>
+
+</body>
+
+</html>
